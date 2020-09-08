@@ -42,6 +42,8 @@
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "storybook": "start-storybook -p 6006 -c ./docs/storybook/.storybook",
+    "build-storybook": "build-storybook -c ./docs/storybook/.storybook",
     "prettify": "prettier --write"
   },
   "browserslist": [
@@ -65,6 +67,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "7.4.3",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/react": "^6.0.21",
     "chalk": "2.4.2",
     "compression": "1.7.4",
     "connected-react-router": "6.4.0",
@@ -126,8 +130,8 @@
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-prettier": "3.0.1",
     "eslint-plugin-react": "7.12.4",
-    "eslint-plugin-redux-saga": "1.0.0",
     "eslint-plugin-react-hooks": "1.6.0",
+    "eslint-plugin-redux-saga": "1.0.0",
     "file-loader": "3.0.1",
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.2.0",
